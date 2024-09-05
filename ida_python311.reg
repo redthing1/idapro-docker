@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Hex-Rays\IDA]
+"Python3TargetDLL"="C:\\python311\\python.exe"

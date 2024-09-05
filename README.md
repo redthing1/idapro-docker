@@ -1,10 +1,17 @@
 # idapro-docker
 
-<p align="center"><img src="wrkdir/docker-ida.png"></p>
+<p align="center"><img src="img/docker-ida.png"></p>
 
 ## About
 
 IDA Pro (Windows) on Linux using Docker and Wine with X11 Forwarding over SSH. Why? Because I'm only paying for the Windows version but I also want to use it on Linux `¯\_(ツ)_/¯`
+
+
+## build
+
+```sh
+podman build --build-arg IDA_PATH=/path/to/ida -f idapro.docker -t idapro .
+```
 
 ```bash
 $ ./ida.sh
@@ -36,7 +43,7 @@ You can stop the container with `./ida.sh stop` and start a new container with `
 You can run IDA with `./ida.sh ida` or `./ida.sh ida64`.
 
 - If you need a shell on the container you can use `./ida.sh shell`.
-- If you need to transfer, and preserve, files between your host and the container use the local `wrkdir` mapped to `/wrkdir` in the container.
+- If you need to transfer, and preserve, files between your host and the container use the local `img` mapped to `/img` in the container.
 - If you want to start over, use `./ida.sh purge`.
 
 ## Remarks
